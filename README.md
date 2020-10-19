@@ -1,6 +1,6 @@
 # DynamicTemplate
 
-**TODO: Add description**
+This module allows you to compile your templates and add them as Elixir modules to your application on-the-fly.
 
 ## Installation
 
