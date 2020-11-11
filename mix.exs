@@ -4,7 +4,7 @@ defmodule DynamicTemplate.MixProject do
   def project do
     [
       app: :dynamic_template,
-      version: "0.1.1",
+      version: "0.1.2",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -28,7 +28,9 @@ defmodule DynamicTemplate.MixProject do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:phoenix_html, "~> 2.14.2"}
+    ]
   end
 
   defp package() do

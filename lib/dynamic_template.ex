@@ -10,8 +10,8 @@ defmodule DynamicTemplate do
     apply(module_name, :render, [assigns])
   end
 
-  def compile(template_string, module_name, view_module) when is_binary(template_string) do
-    EEx.compile_string(template_string)
+  def compile(template_string, module_name, view_module, rendering_engine \\ Phoenix.HTML.Engine) when is_binary(template_string) and is_atom(rendering_engine) do
+    EEx.compile_string(template_string, engine: rendering_engine)
     |> compile_ast(module_name, view_module)
   end
 
